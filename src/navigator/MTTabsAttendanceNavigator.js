@@ -34,9 +34,9 @@ export const MTTabsAttendanceNavigator = () => {
       }}
       
     >
-        <MTopTabs.Screen name='RegistrationPage' options={{ tabBarLabel: 'Registros' }} component={RegistrationPage} />
-        <MTopTabs.Screen name='AttendancePage' options={{ tabBarLabel: 'Asistencias' }} component={AttendancePage} />
-        <MTopTabs.Screen name='AbsencePage' options={{ tabBarLabel: 'Inasistencia' }} component={AbsencePage} />
+        <MTopTabs.Screen name='RegistrationPage' options={{ tabBarLabel: 'Asistenicias' }} component={RegistrationPage} />
+        <MTopTabs.Screen name='AttendancePage' options={{ tabBarLabel: 'Registros' }} component={AttendancePage} />
+        <MTopTabs.Screen name='AbsencePage' options={{ tabBarLabel: 'Inasistencias' }} component={AbsencePage} />
     </MTopTabs.Navigator>
   )
 }

@@ -8,7 +8,7 @@ export const RegistrationPage = () => {
   return (
     <View>
         <Text>Registros de entrada</Text>
-        <AccessComponent nombre='Rafael Escobar' img_path={url_Provicional} entrada='00:00' noControl='222111269' /> 
+        <AccessComponent nombre='Rafael Escobar' img_path={url_Provicional} entrada='00:00' turno='Primero' /> 
     </View>
   )
 }
