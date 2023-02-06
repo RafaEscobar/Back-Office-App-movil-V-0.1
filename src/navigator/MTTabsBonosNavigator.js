@@ -2,13 +2,14 @@ import React from 'react'
 // Navegaciones
 import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
 // Screens o Pages
-import { AssignPage } from '../pages/extrahrs/AssignPage';
-import { AssignedPage } from '../pages/extrahrs/AssignedPage';
 import { paletaColors, paletaColorsSecond } from '../themes/appTheme';
+import { TypeBonosPage } from '../pages/bonos/TypeBonosPage'; 
+import { RankingBonoPage } from '../pages/bonos/RankingBonoPage';
+import { UserBonoPage } from '../pages/bonos/UserBonoPage';
 
 const MTopTabs = createMaterialTopTabNavigator();
 
-export const MTTabsExtraHrsNavigator = () => {
+export const MTTabsBonosNavigator = () => {
   return (
     <MTopTabs.Navigator
       sceneContainerStyle={{ backgroundColor: 'white' }}
@@ -31,8 +32,9 @@ export const MTTabsExtraHrsNavigator = () => {
         
       }}
     >
-      <MTopTabs.Screen name='AssignPage' options={{ tabBarLabel: 'Asignar hrs extra' }} component={AssignPage} />
-      <MTopTabs.Screen name='AssignedPage' options={{ tabBarLabel: 'Horas extra asignadas' }} component={AssignedPage} />
+      <MTopTabs.Screen name='AssignPage' options={{ tabBarLabel: 'Usuario bonificado' }} component={UserBonoPage} />
+      <MTopTabs.Screen name='AssignedPage' options={{ tabBarLabel: 'Ranking' }} component={RankingBonoPage} />
+      <MTopTabs.Screen name='TypeBonosPage' options={{ tabBarLabel: 'Bonos' }} component={TypeBonosPage} />
     </MTopTabs.Navigator>
   )
 }

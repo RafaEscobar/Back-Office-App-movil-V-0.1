@@ -10,7 +10,7 @@ interface Props {
   turno: string,
 }
 
-export const AccessComponent = ({ img_path, nombre, entrada, turno }: Props) => {
+export const AttendancesComponent = ({ img_path, nombre, entrada, turno }: Props) => {
   return (
     <Box style={styles.boxCenter}>
       <Box style={styles.boxAccess}>

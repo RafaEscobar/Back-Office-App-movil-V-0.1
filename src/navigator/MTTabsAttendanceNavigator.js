@@ -2,10 +2,10 @@ import React from 'react'
 // Navegacion
 import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs'
 // Screens o Pages 
-import { RegistrationPage } from '../pages/attendances/RegistrationPage';
 import { AttendancePage } from '../pages/attendances/AttendancePage';
 import { paletaColors } from '../themes/appTheme';
 import { AbsencePage } from '../pages/attendances/AbsencePage';
+import { RecordsPage } from '../pages/attendances/RecordsPage';
 const MTopTabs = createMaterialTopTabNavigator();
 
 export const MTTabsAttendanceNavigator = () => {
@@ -34,8 +34,8 @@ export const MTTabsAttendanceNavigator = () => {
       }}
       
     >
-        <MTopTabs.Screen name='RegistrationPage' options={{ tabBarLabel: 'Asistenicias' }} component={RegistrationPage} />
-        <MTopTabs.Screen name='AttendancePage' options={{ tabBarLabel: 'Registros' }} component={AttendancePage} />
+        <MTopTabs.Screen name='AttendancePage' options={{ tabBarLabel: 'Asistenicias' }} component={AttendancePage} />
+        <MTopTabs.Screen name='RecordsPage' options={{ tabBarLabel: 'Registros' }} component={RecordsPage} />
         <MTopTabs.Screen name='AbsencePage' options={{ tabBarLabel: 'Inasistencias' }} component={AbsencePage} />
     </MTopTabs.Navigator>
   )

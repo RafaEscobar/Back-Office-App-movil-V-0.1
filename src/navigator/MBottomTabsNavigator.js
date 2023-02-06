@@ -2,15 +2,17 @@ import React from 'react'
 // Navegacion
 import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs'
 import { StackAttendanceNavigator } from './StackAttendanceNavigator';
-import { StackExtraHrsNavigator } from './StackExtraHrsNavigator';
-import { MTTabsExtraHrsNavigator } from './MTTabsExtraHrsNavigator';
+
 // Screens o Pages
 import { ProfileScreen } from '../screens/ProfileScreen';
 import { StaffScreen } from '../screens/StaffScreen';
+import { MTTabsBonosNavigator } from './MTTabsBonosNavigator';
+import { MTTabsAttendanceNavigator } from './MTTabsAttendanceNavigator';
 
 // Iconos
 import Icon from 'react-native-vector-icons/Ionicons';
 import { paletaColorsSecond } from '../themes/appTheme';
+
 
 const MBTabs = createMaterialBottomTabNavigator();
 
@@ -26,11 +28,11 @@ export const MBottomTabsNavigator = () => {
             let myIcon = '';
 
             switch (route.name) {
-              case 'StackAttendanceNavigator':
+              case 'MTTabsAttendanceNavigator':
                 myIcon='checkmark-done';
               break;
-              case 'StackExtraHrsNavigator':
-                myIcon='stopwatch';
+              case 'MTTabsBonosNavigator':
+                myIcon='gift';
               break;
               case 'StaffScreen':
                 myIcon='people';
@@ -47,8 +49,8 @@ export const MBottomTabsNavigator = () => {
         })
        }
     >
-        <MBTabs.Screen name='StackAttendanceNavigator' options={{ tabBarLabel:'Asistencias' }} component={StackAttendanceNavigator} />
-        <MBTabs.Screen name='StackExtraHrsNavigator' options={{ tabBarLabel:'Horas extra' }} component={StackExtraHrsNavigator} />
+        <MBTabs.Screen name='MTTabsAttendanceNavigator' options={{ tabBarLabel:'Asistencias' }} component={MTTabsAttendanceNavigator} />
+        <MBTabs.Screen name='MTTabsBonosNavigator' options={{ tabBarLabel:'Bonos' }} component={MTTabsBonosNavigator} />
         <MBTabs.Screen name='StaffScreen' options={{ tabBarLabel:'Trabajadores' }} component={StaffScreen} />
         <MBTabs.Screen name='ProfileScreen' options={{ tabBarLabel:'Perfil' }} component={ProfileScreen} />
     </MBTabs.Navigator>
