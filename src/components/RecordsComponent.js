@@ -11,7 +11,7 @@ interface Props {
     horas: string,
 }
 
-export const AttendanceComponent = ({nombre, puesto, entrada, salida, horas}:Props) => {
+export const RecordsComponent = ({nombre, puesto, entrada, salida, horas}:Props) => {
   return (
     <Box style={styles.boxCenter}>
         <Box style={styles.boxAttendance}>
