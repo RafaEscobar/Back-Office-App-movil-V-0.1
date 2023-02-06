@@ -1,7 +1,6 @@
-import { Text, View } from 'native-base'
+import { Text, View, Box } from 'native-base'
 import React from 'react'
-import { AddHoursComponent } from '../../components/AddHoursComponent'
-import { TouchableOpacity } from 'react-native';
+import { StyleSheet } from 'react-native';
 
 // Props para navigator
 import { StackScreenProps } from '@react-navigation/stack';
@@ -14,9 +13,19 @@ export const RankingBonoPage = ({navigation}: Props) => {
   return (
     <View>
         <Text>Asignar horas extra</Text>
-        <TouchableOpacity onPress={() => navigation.navigate('AddExtraHrsScreen')} >
-          <AddHoursComponent img_path={url_Provicional} nombre='Rafael Escobar' noControl='222111' />
-        </TouchableOpacity>
+        <View style={styless.box}>
+          <Text style={{fontSize: 19}}>{1}. Rafael Escobar   Días puntual: {10}</Text>
+        </View>
     </View>
   )
 }
+
+const styless = StyleSheet.create({
+
+  box: {
+    marginLeft: 30,
+    marginTop: 25,
+    marginBottom: 10,
+  }
+
+});
