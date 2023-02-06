@@ -20,7 +20,7 @@ export const AbsenceComponent = ({ img_path, nombre, turno, puesto }: Props) => 
           </Box>
             <Box style={styless.box_marginRight}>
               <Text style={{marginBottom: 7}}>{nombre}</Text>
-              <Text >{turno}</Text>
+              <Text>Turno: {turno}</Text>
             </Box>
             <Box style={styless.boxMargin}>
               <Text>Puesto:</Text>
