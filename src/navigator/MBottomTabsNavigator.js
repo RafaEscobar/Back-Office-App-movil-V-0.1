@@ -2,8 +2,7 @@ import React from 'react'
 // Navegacion
 import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs'
 import { StackAttendanceNavigator } from './StackAttendanceNavigator';
-import { StackExtraHrsNavigator } from './StackExtraHrsNavigator';
-import { MTTabsExtraHrsNavigator } from './MTTabsExtraHrsNavigator';
+
 // Screens o Pages
 import { ProfileScreen } from '../screens/ProfileScreen';
 import { StaffScreen } from '../screens/StaffScreen';
@@ -11,6 +10,7 @@ import { StaffScreen } from '../screens/StaffScreen';
 // Iconos
 import Icon from 'react-native-vector-icons/Ionicons';
 import { paletaColorsSecond } from '../themes/appTheme';
+import { StackBonosNavigator } from './StackBonosNavigator';
 
 const MBTabs = createMaterialBottomTabNavigator();
 
@@ -48,7 +48,7 @@ export const MBottomTabsNavigator = () => {
        }
     >
         <MBTabs.Screen name='StackAttendanceNavigator' options={{ tabBarLabel:'Asistencias' }} component={StackAttendanceNavigator} />
-        <MBTabs.Screen name='StackExtraHrsNavigator' options={{ tabBarLabel:'Horas extra' }} component={StackExtraHrsNavigator} />
+        <MBTabs.Screen name='StackExtraHrsNavigator' options={{ tabBarLabel:'Horas extra' }} component={StackBonosNavigator} />
         <MBTabs.Screen name='StaffScreen' options={{ tabBarLabel:'Trabajadores' }} component={StaffScreen} />
         <MBTabs.Screen name='ProfileScreen' options={{ tabBarLabel:'Perfil' }} component={ProfileScreen} />
     </MBTabs.Navigator>

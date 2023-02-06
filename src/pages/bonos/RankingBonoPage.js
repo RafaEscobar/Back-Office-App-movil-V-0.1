@@ -10,7 +10,7 @@ let url_Provicional='https://images.unsplash.com/photo-1603415526960-f7e0328c63b
 
 interface Props extends StackScreenProps<any, any>{};
 
-export const AssignPage = ({navigation}: Props) => {
+export const RankingBonoPage = ({navigation}: Props) => {
   return (
     <View>
         <Text>Asignar horas extra</Text>
