@@ -6,12 +6,11 @@ import { styles, paletaColorsSecond } from '../themes/appTheme';
 interface Props {
     img_path: string,
     nombre: string,
-    fecha: string,
-    noControl: string,
-    estatus: string,
+    turno: string,
+    puesto: string,
 }
 
-export const AbsenceComponent = ({ img_path, nombre, fecha, noControl, estatus }: Props) => {
+export const AbsenceComponent = ({ img_path, nombre, turno, puesto }: Props) => {
   return (
     <Box style={{...styles.boxCenter, }}>
         <Box style={{...styles.boxAccess, backgroundColor: paletaColorsSecond.tertiary}}>
@@ -21,12 +20,12 @@ export const AbsenceComponent = ({ img_path, nombre, fecha, noControl, estatus }
           </Box>
             <Box style={styless.box_marginRight}>
               <Text style={{marginBottom: 7}}>{nombre}</Text>
-              <Text style={styless.text_small}>{fecha}</Text>
+              <Text>Turno: {turno}</Text>
             </Box>
-            <Box >
-              <Text style={{marginBottom: 7}}>Id: {noControl}</Text>
-              <Text style={styless.text_small}>{estatus}</Text>
-            </Box>
+            <Box style={styless.boxMargin}>
+              <Text>Puesto:</Text>
+              <Text style={styless.txtTop}>{puesto}</Text>
+        </Box>
         </Box>
     </Box>
   )
@@ -34,12 +33,20 @@ export const AbsenceComponent = ({ img_path, nombre, fecha, noControl, estatus }
 
 const styless = StyleSheet.create({
     img_marginRight: {
-        marginRight: 15
+        marginHorizontal: 10
     },
     box_marginRight: {
-        marginRight: 20
+        marginRight: 20,
+        marginLeft:10,
     },
     text_small: {
         fontSize:12
+    },
+    boxMargin: {
+      marginLeft: 40,
+    },
+    txtTop: {
+      marginTop: 6
     }
+
 });

@@ -7,10 +7,10 @@ interface Props {
   img_path: string,
   nombre: string,
   entrada: string,
-  noControl: string,
+  turno: string,
 }
 
-export const AccessComponent = ({ img_path, nombre, entrada, noControl }: Props) => {
+export const AccessComponent = ({ img_path, nombre, entrada, turno }: Props) => {
   return (
     <Box style={styles.boxCenter}>
       <Box style={styles.boxAccess}>
@@ -21,9 +21,9 @@ export const AccessComponent = ({ img_path, nombre, entrada, noControl }: Props)
           <Text>{nombre}</Text>
           <Text style={styless.txtTop}>Entrada: {entrada}</Text>
         </Box>
-        <Box style={styless.boxes}>
-          <Text>Identificador:</Text>
-          <Text style={styless.txtTop}>{noControl}</Text>
+        <Box style={styless.boxmargingL}>
+          <Text>Turno:</Text>
+          <Text style={styless.txtTop}>{turno}</Text>
         </Box>
       </Box>
     </Box>
@@ -34,10 +34,15 @@ const styless = StyleSheet.create({
 
   boxImg: {
     marginRight: 15,
+    marginLeft: 7,
   },
   boxes: {
-    flex:3, 
-    marginRight: 15,
+    flex:3,
+    marginLeft: 15,
+  },
+  boxmargingL: {
+    flex: 2,
+    // backgroundColor: 'yellow'
   },
   txtTop: {
     top: 5,

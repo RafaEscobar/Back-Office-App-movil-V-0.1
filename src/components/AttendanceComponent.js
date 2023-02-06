@@ -5,19 +5,19 @@ import { StyleSheet } from 'react-native';
 
 interface Props {
     nombre: string,
-    noControl: string,
+    puesto: string,
     entrada: string,
     salida: string,
     horas: string,
 }
 
-export const AttendanceComponent = ({nombre, noControl, entrada, salida, horas}:Props) => {
+export const AttendanceComponent = ({nombre, puesto, entrada, salida, horas}:Props) => {
   return (
     <Box style={styles.boxCenter}>
         <Box style={styles.boxAttendance}>
             <Box style={styless.boxPrincipal}>
                 <Text>{nombre}</Text>
-                <Text>Identificador: {noControl}</Text>
+                <Text>Puesto: {puesto}</Text>
             </Box>
             <Box style={styless.boxSecond}>
                 <Box style={styless.box}>
