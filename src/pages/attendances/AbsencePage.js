@@ -16,7 +16,7 @@ export const AbsencePage = ({navigation}: Props) => {
         <View>
             <Text>Registros de ausencias</Text>
             <TouchableOpacity onPress={ () => navigation.navigate('AbsenceDetailsScreen') }>
-                <AbsenceComponent img_path={url_Provicional} nombre='Rafael Escobar' fecha='10/12/2020' noControl='222111' estatus='Inasistencia' />
+                <AbsenceComponent img_path={url_Provicional} nombre='Rafael Escobar' turno='Segundo' puesto='Gerente' estatus='Inasistencia' />
             </TouchableOpacity>
         </View>
     )
