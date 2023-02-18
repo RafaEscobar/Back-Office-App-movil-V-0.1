@@ -10,7 +10,7 @@ export const paletaColors = {
 export const paletaColorsSecond = {
     primary: 'rgba(0, 0, 0, 1)',
     secondary: 'rgba(0, 0, 0, 0.30)',
-    tertiary: 'rgba(255, 0, 0, 0.13)',
+    tertiary: 'rgba(255, 0, 0, 0.08)',
 }
 
 export const styles = StyleSheet.create({

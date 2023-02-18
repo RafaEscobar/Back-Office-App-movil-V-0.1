@@ -14,7 +14,7 @@ export const RankingBonoPage = ({navigation}: Props) => {
   return (
     <View>
         <Text>Asignar horas extra</Text>
-        <View style={{backgroundColor: paletaColors.secondary, marginTop: 20, marginBottom: 10, height: 30, justifyContent: 'center'}}>
+        <View style={{ marginTop: 20, marginBottom: 10, height: 30, justifyContent: 'center'}}>
           <View style={styless.box}>
             <Text style={{fontSize: 19}}>{1}. Rafael Escobar   Días puntual: {10}</Text>
           </View>
@@ -22,11 +22,8 @@ export const RankingBonoPage = ({navigation}: Props) => {
     </View>
   )
 }
-
 const styless = StyleSheet.create({
-
   box: {
     marginLeft: 30,
   }
-
 });

@@ -16,7 +16,6 @@ export const MTTabsAttendanceNavigator = () => {
       screenOptions={{ 
         
         tabBarStyle: {
-          backgroundColor: paletaColors.secondary,
           borderTopWidth: 0,
           elevation: 0,
         },
@@ -24,17 +23,16 @@ export const MTTabsAttendanceNavigator = () => {
           backgroundColor: paletaColors.tertiary,
         },
         tabBarLabelStyle: {
-          fontSize: 12,
+          fontSize: 11,
           fontWeight: '700',
         },
         tabBarActiveTintColor: 'rgba(0, 0, 0, 1)',
         tabBarInactiveTintColor: 'rgba(0, 0, 0, 0.30)',
         tabBarPressColor: paletaColors.secondary,
-        
       }}
       
     >
-        <MTopTabs.Screen name='AttendancePage' options={{ tabBarLabel: 'Asistenicias' }} component={AttendancePage} />
+        <MTopTabs.Screen name='AttendancePage' options={{ tabBarLabel: 'Asistenicias'}} component={AttendancePage} />
         <MTopTabs.Screen name='RecordsPage' options={{ tabBarLabel: 'Registros' }} component={RecordsPage} />
         <MTopTabs.Screen name='AbsencePage' options={{ tabBarLabel: 'Inasistencias' }} component={AbsencePage} />
     </MTopTabs.Navigator>

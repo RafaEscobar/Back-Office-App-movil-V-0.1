@@ -13,11 +13,11 @@ export const BonosComponent = ({nombre, descripcion }: Props) => {
 <Box style={styles.boxCenter}>
         <Box style={styles.boxAttendance}>
             <Box style={styless.boxPrincipal}>
-                <Text style={{fontSize: 18, fontWeight: 'bold', marginBottom: 5}}>{nombre}</Text>
+                <Text style={{fontSize: 18, fontWeight: 'bold', marginBottom: 5, color:'black'}}>{nombre}</Text>
             </Box>
             <Box style={styless.boxSecond}>
                 <Box style={styless.box}>
-                  <Text>{descripcion}</Text>
+                  <Text style={{color:'black', fontSize: 11}}>{descripcion}</Text>
                 </Box>
             </Box>
         </Box>

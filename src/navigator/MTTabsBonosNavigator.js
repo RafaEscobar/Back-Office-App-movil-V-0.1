@@ -15,7 +15,6 @@ export const MTTabsBonosNavigator = () => {
       sceneContainerStyle={{ backgroundColor: 'white' }}
       screenOptions={{ 
         tabBarStyle: {
-          backgroundColor: paletaColors.secondary,
           borderTopWidth: 0,
           elevation: 0,
         },
@@ -23,7 +22,7 @@ export const MTTabsBonosNavigator = () => {
           backgroundColor: paletaColors.tertiary,
         },
         tabBarLabelStyle: {
-          fontSize: 12,
+          fontSize: 11,
           fontWeight: '700',
         },
         tabBarActiveTintColor: paletaColorsSecond.primary,
