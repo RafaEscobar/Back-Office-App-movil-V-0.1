@@ -10,7 +10,9 @@ const Drawer = createDrawerNavigator();
 
 export const DrawerNavigator = () => {
   return (
-    <Drawer.Navigator>
+    <Drawer.Navigator
+      screenOptions={{ headerShown: false }}
+    >
         <Drawer.Screen name='MBottomTabsNavigator' component={MBottomTabsNavigator} />
         <Drawer.Screen name='indexU' component={IndexU} />
         <Drawer.Screen name='indexP' component={IndexP} />
