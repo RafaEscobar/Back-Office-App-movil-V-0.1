@@ -4,7 +4,6 @@ import { createMaterialTopTabNavigator } from '@react-navigation/material-top-ta
 // Screens o Pages
 import { paletaColors, paletaColorsSecond } from '../themes/appTheme';
 import { TypeBonosPage } from '../pages/bonos/TypeBonosPage'; 
-import { RankingBonoPage } from '../pages/bonos/RankingBonoPage';
 import { UserBonoPage } from '../pages/bonos/UserBonoPage';
 
 const MTopTabs = createMaterialTopTabNavigator();
@@ -31,9 +30,8 @@ export const MTTabsBonosNavigator = () => {
         
       }}
     >
-      <MTopTabs.Screen name='AssignPage' options={{ tabBarLabel: 'Usuario bonificado' }} component={UserBonoPage} />
-      <MTopTabs.Screen name='AssignedPage' options={{ tabBarLabel: 'Ranking' }} component={RankingBonoPage} />
-      <MTopTabs.Screen name='TypeBonosPage' options={{ tabBarLabel: 'Bonos' }} component={TypeBonosPage} />
+      <MTopTabs.Screen name='AssignPage' options={{ tabBarLabel: 'Empleados con bono' }} component={UserBonoPage} />
+      <MTopTabs.Screen name='TypeBonosPage' options={{ tabBarLabel: 'Tipos de bonos' }} component={TypeBonosPage} />
     </MTopTabs.Navigator>
   )
 }

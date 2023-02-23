@@ -35,7 +35,7 @@ export const MBottomTabsNavigator = () => {
                 myIcon='gift';
               break;
               case 'StaffScreen':
-                myIcon='people';
+                myIcon='grid';
               break;
               case 'ProfileScreen':
                 myIcon='person-circle'  ;
@@ -51,7 +51,7 @@ export const MBottomTabsNavigator = () => {
     >
         <MBTabs.Screen name='MTTabsAttendanceNavigator' options={{ tabBarLabel:'Asistencias' }} component={MTTabsAttendanceNavigator} />
         <MBTabs.Screen name='MTTabsBonosNavigator' options={{ tabBarLabel:'Bonos' }} component={MTTabsBonosNavigator} />
-        <MBTabs.Screen name='StaffScreen' options={{ tabBarLabel:'Trabajadores' }} component={StaffScreen} />
+        <MBTabs.Screen name='StaffScreen' options={{ tabBarLabel:'Trabajadores',  }} component={StaffScreen} />
         <MBTabs.Screen name='ProfileScreen' options={{ tabBarLabel:'Perfil' }} component={ProfileScreen} />
     </MBTabs.Navigator>
   )
