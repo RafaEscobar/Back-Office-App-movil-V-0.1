@@ -3,27 +3,20 @@ import React from 'react'
 import { styles } from '../themes/appTheme';
 import { StyleSheet } from 'react-native';
 
-interface Props {
-  img_path: string,
-  nombre: string,
-  entrada: string,
-  turno: string,
-}
-
-export const AttendancesComponent = ({ img_path, nombre, entrada, turno }: Props) => {
+export const AttendancesComponent = ({ img_path, nombre, entrada, turno }) => {
   return (
     <Box style={styles.boxCenter}>
       <Box style={styles.boxAccess}>
         <Box style={styless.boxImg}>
-          <Avatar bg="cyan.500" source={{ uri: img_path}}></Avatar>
+          <Avatar bg="cyan.500" source={{ uri: img_path}} ></Avatar>
         </Box>
         <Box style={styless.boxes}>
-          <Text>{nombre}</Text>
-          <Text style={styless.txtTop}>Entrada: {entrada}</Text>
+          <Text style={styless.title}>{nombre}</Text>
+          <Text style={styless.txt}>Entrada: {entrada}</Text>
         </Box>
         <Box style={styless.boxmargingL}>
-          <Text>Turno:</Text>
-          <Text style={styless.txtTop}>{turno}</Text>
+          <Text style={styless.title}>Turno:</Text>
+          <Text style={styless.txt}>{turno}</Text>
         </Box>
       </Box>
     </Box>
@@ -31,21 +24,28 @@ export const AttendancesComponent = ({ img_path, nombre, entrada, turno }: Props
 }
 
 const styless = StyleSheet.create({
-
+  // Caja imagen
   boxImg: {
     marginRight: 15,
     marginLeft: 7,
   },
+  // Titulos
+  title: {
+    fontSize: 16,
+    fontWeight: 'bold'
+  },
+  // Texto interno (No incluye titulos)
+  txt: {
+    top: 5,
+  },
+  // Disposicion interna de la caja
   boxes: {
+    
     flex:3,
     marginLeft: 15,
   },
+  // Espaciado entre columnas de texto
   boxmargingL: {
     flex: 2,
-    // backgroundColor: 'yellow'
   },
-  txtTop: {
-    top: 5,
-  },
-
 });

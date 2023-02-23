@@ -1,37 +1,53 @@
-import { Avatar, Box } from 'native-base';
+import { Avatar, Box, View } from 'native-base';
 import React from 'react'
 import { StyleSheet, Text } from 'react-native';
-import { styles } from '../themes/appTheme';
+import { paletaColors } from '../themes/appTheme';
 
-interface Props {
-    nombre: string,
-    descripcion: string,
-  }
-
-export const BonosComponent = ({nombre, descripcion }: Props) => {
+export const BonosComponent = ({nombre, descripcion}) => {
   return (
-<Box style={styles.boxCenter}>
-        <Box style={styles.boxAttendance}>
-            <Box style={styless.boxPrincipal}>
-                <Text style={{fontSize: 18, fontWeight: 'bold', marginBottom: 5, color:'black'}}>{nombre}</Text>
-            </Box>
-            <Box style={styless.boxSecond}>
-                <Box style={styless.box}>
-                  <Text style={{color:'black', fontSize: 11}}>{descripcion}</Text>
-                </Box>
-            </Box>
+    <Box style={styless.boxA}>
+      <Box style={styless.box}>
+        <Box>
+          <Text style={styless.title}>{nombre}</Text>
         </Box>
+          <Box style={styless.boxDes}>
+            <Text style={styless.description}>{descripcion}</Text>
+          </Box>
+      </Box>
     </Box>
     )
 }
 
 const styless = StyleSheet.create({
-    boxImg: {
-      marginRight: 15,
+
+    title: {
+      fontSize: 18,
+      fontWeight: 'bold',
+      bottom: 7,
+      color:'black',
+      marginLeft: 25
     },
-    boxes: {
-      flex:3, 
-      marginRight: 15,
+    boxA: {
+      alignItems: 'center',
+      marginTop: 20,
     },
+    box: {
+      width: '100%',
+      height: 120,
+      backgroundColor: paletaColors.secondary,
+      justifyContent: 'center',
+      marginTop: 7
+    },
+    description: {
+      fontSize: 16,
+      textAlign: 'justify',
+      marginLeft: 25,
+      color: 'black'
+    },
+    boxDes: {
+      width: 365
+    }
+
+
   });
   
