@@ -9,6 +9,8 @@ export const LoginScreen = ({navigation}) => {
     const baseEmail ='rafa@gmail.com';
     const baseContra='rafa1234';
 
+    const userEmail = 'user@gmail.com';
+    const userContra = 'user1234';
 
     const mensaje = [{status: "error",title: "Credenciales invalidas!"}];
 
@@ -27,7 +29,9 @@ export const LoginScreen = ({navigation}) => {
             // console.log(email.correo);
             if (email===baseEmail && contra==baseContra) {
               navigation.replace('MBottomTabsNavigator');
-            } else {
+            } else if(email===userEmail && contra==userContra){
+              navigation.replace('MBottomTabsUserNavigator');
+            }else {
                 toast.show({
                     render: () => {
                       return <Box bg="red.500" px="2" py="1" rounded="sm" mb={5} _text={{color: 'black', fontWeight:'500'}}>
@@ -46,20 +50,18 @@ export const LoginScreen = ({navigation}) => {
                 <Image source={require('../imgs/usuario.png')} style={{width: 300, height: 300}} />
             </Box>
             <Text style={{fontWeight: '500', fontSize: 16}}>Inicia sesión para continuar...</Text>          
-            <VStack space={3} mt="5">
-            <FormControl>
-                <FormControl.Label _text={{fontSize: 18}}>Correo electronico: </FormControl.Label>
-                <Input type='text' onChangeText={(email) => setEmail(email) } />
-            </FormControl>
-            <FormControl>
-                <FormControl.Label _text={{fontSize: 18}}>Contraseña</FormControl.Label>
-                <Input type="password" onChangeText={(contra) => setContra(contra)} />
-            </FormControl>
-            <Button mt="2" style={{backgroundColor: '#6eb2ea'}} _text={{color: 'black', fontWeight: '500', fontSize:16}} onPress={handleSubmitPress}>
-                Iniciar sesión
-            </Button>
-            <HStack mt="6" justifyContent="center">
-            </HStack>
+            <VStack space={3} mt="5" style={{marginBottom: 30}}>
+              <FormControl>
+                  <FormControl.Label _text={{fontSize: 18}}>Correo electronico: </FormControl.Label>
+                  <Input type='text' onChangeText={(email) => setEmail(email) } />
+              </FormControl>
+              <FormControl>
+                  <FormControl.Label _text={{fontSize: 18}}>Contraseña</FormControl.Label>
+                  <Input type="password" onChangeText={(contra) => setContra(contra)} />
+              </FormControl>
+              <Button mt="2" style={{backgroundColor: '#6eb2ea', marginBottom: 10, marginTop: 40}} _text={{color: 'black', fontWeight: '500', fontSize:16}} onPress={handleSubmitPress}>
+                  Iniciar sesión
+              </Button>
             </VStack>
         </Box>
     </ScrollView>

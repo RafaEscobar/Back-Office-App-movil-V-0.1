@@ -12,6 +12,7 @@ export const MBottomTabsUserNavigator = () => {
     <MTabs.Navigator
         sceneAnimationEnabled={true}
         shifting={true}
+        barStyle={{backgroundColor: 'white'}}
         screenOptions={
             ({route}) => ({
                 tabBarIcon: () => {
@@ -27,9 +28,6 @@ export const MBottomTabsUserNavigator = () => {
                         case 'ProfileScreen':
                             my_icon='person-circle';
                         break;
-                        case 'LoginScreen':
-                            my_icon='person-circle';
-                        break;
                         default: 
                         break;
                     }
@@ -41,7 +39,6 @@ export const MBottomTabsUserNavigator = () => {
         <MTabs.Screen name='AttendanceScreen' options={{tabBarLabel:'Asistencias'}} component={AttendanceScreen} />
         <MTabs.Screen name='MTTabsBonosUsersNavigator' options={{tabBarLabel:'Bonos'}} component={MTTabsBonosUsersNavigator} />
         <MTabs.Screen name='ProfileScreen' options={{tabBarLabel:'Perfil'}} component={ProfileScreen} />
-        <MTabs.Screen name='LoginScreen' options={{tabBarLabel:'Perfil'}} component={LoginScreen} />
     </MTabs.Navigator>
   )
 }

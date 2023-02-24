@@ -4,7 +4,7 @@ import { ScrollView, StyleSheet, TouchableOpacity } from 'react-native';
 import { paletaColors } from '../themes/appTheme'
 import Icon from 'react-native-vector-icons/Ionicons';
 
-export const ProfileScreen = () => {
+export const ProfileScreen = ({navigation}) => {
   return (
     <ScrollView >
         
@@ -39,7 +39,7 @@ export const ProfileScreen = () => {
                     </Box>
                 </Box>
             </Box>
-            <TouchableOpacity>
+            <TouchableOpacity onPress={ () => navigation.navigate('LoginScreen') }>
                 <Box style={styless.boxSesion}>
                     <Text style={styless.txtSesion}>Cerrar sesión</Text>
                     <Icon name='exit' size={35} color='black'/>
