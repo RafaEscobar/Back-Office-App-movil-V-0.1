@@ -35,7 +35,7 @@ export const MBottomTabsNavigator = () => {
                 myIcon='gift';
               break;
               case 'StaffScreen':
-                myIcon='grid';
+                myIcon='apps';
               break;
               case 'ProfileScreen':
                 myIcon='person-circle'  ;
