@@ -1,30 +1,51 @@
-import { Avatar, Box, Text } from 'native-base'
 import React from 'react'
+import { Avatar, Box, Text } from 'native-base'
 import { styles } from '../themes/appTheme'
+import { StyleSheet } from 'react-native'
 
-interface Props {
-    img_path: string,
-    nombre: string,
-    turno: string,
-    bono: string
-}
-
-export const UserBonoComponent = ({ img_path, nombre, turno, bono }: Props) => {
+export const UserBonoComponent = ({ img_path, nombre, turno, bono, fecha }) => {
   return (
     <Box style={styles.boxCenter}>
-        <Box style={styles.boxAccess}>
-          <Box style={{marginLeft: 8, marginRight: 20}}>
-            <Avatar bg="cyan.500" source={{ uri: img_path}}></Avatar>
-          </Box>
-          <Box style={{marginRight: 45}}>
-            <Text style={{marginBottom: 7}}>{nombre}</Text>
-            <Text>Turno: {turno}</Text>
-          </Box>
-          <Box>
-            <Text style={{marginBottom: 7}}>Tipo de bono:</Text>
-            <Text>{bono}</Text>
-          </Box>
+      <Box style={styles.boxAccess}>
+        <Box style={styless.boxImg}>
+          <Avatar bg="cyan.500" source={{ uri: img_path}} ></Avatar>
         </Box>
+        <Box style={styless.boxes}>
+          <Text style={styless.title}>{nombre}</Text>
+          <Text style={styless.txt}>Bono: {bono}</Text>
+        </Box>
+        <Box style={styless.boxmargingL}>
+          <Text style={styless.title}>Fecha:</Text>
+          <Text style={styless.txt}>{fecha}</Text>
+        </Box>
+      </Box>
     </Box>
     )
 }
+
+const styless = StyleSheet.create({
+  // Caja imagen
+  boxImg: {
+    marginRight: 15,
+    marginLeft: 7,
+  },
+  // Titulos
+  title: {
+    fontSize: 16,
+    fontWeight: 'bold'
+  },
+  // Texto interno (No incluye titulos)
+  txt: {
+    top: 5,
+  },
+  // Disposicion interna de la caja
+  boxes: {
+    
+    flex:3,
+    marginLeft: 15,
+  },
+  // Espaciado entre columnas de texto
+  boxmargingL: {
+    flex: 2,
+  },
+});

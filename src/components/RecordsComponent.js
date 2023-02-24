@@ -3,15 +3,9 @@ import React from 'react'
 import { styles } from '../themes/appTheme';
 import { StyleSheet } from 'react-native';
 
-interface Props {
-    nombre: string,
-    puesto: string,
-    entrada: string,
-    salida: string,
-    horas: string,
-}
 
-export const RecordsComponent = ({nombre, puesto, entrada, salida, horas}:Props) => {
+
+export const RecordsComponent = ({nombre, puesto, entrada, salida, horas}) => {
   return (
     <Box style={styles.boxCenter}>
         <Box style={styles.boxAttendance}>

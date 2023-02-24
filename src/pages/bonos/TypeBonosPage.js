@@ -1,12 +1,21 @@
 import React from 'react'
-import {View, Text} from 'native-base'
+import {View, Text, Box} from 'native-base'
 import { BonosComponent } from '../../components/BonosComponent'
+import { StyleSheet } from 'react-native'
 
 export const TypeBonosPage = () => {
   return (
         <View>
-            <Text>Tipos de bonos</Text>
-            <BonosComponent nombre='Mensual' descripcion='recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.' />
+            <Text style={styless.title}>Tipos de bonos</Text>
+                <BonosComponent nombre='Mensual' descripcion='Recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.' />
+                <BonosComponent nombre='Mensual' descripcion='Recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.' />
         </View>
     )
 }
+
+const styless = StyleSheet.create({  title: {
+    fontSize: 18,
+    fontWeight: '500',
+    marginLeft: 22,
+    marginTop: 20,
+}});

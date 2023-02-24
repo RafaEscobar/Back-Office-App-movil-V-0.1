@@ -30,8 +30,9 @@ export const MTTabsBonosNavigator = () => {
         
       }}
     >
-      <MTopTabs.Screen name='AssignPage' options={{ tabBarLabel: 'Usuario bonificado' }} component={UserBonoPage} />
-      <MTopTabs.Screen name='TypeBonosPage' options={{ tabBarLabel: 'Bonos' }} component={TypeBonosPage} />
+
+      <MTopTabs.Screen name='AssignPage' options={{ tabBarLabel: 'Empleados con bono' }} component={UserBonoPage} />
+      <MTopTabs.Screen name='TypeBonosPage' options={{ tabBarLabel: 'Tipos de bonos' }} component={TypeBonosPage} />
     </MTopTabs.Navigator>
   )
 }
