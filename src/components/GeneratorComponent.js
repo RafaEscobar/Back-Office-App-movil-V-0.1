@@ -8,12 +8,12 @@ export const GeneratorComponent = ({mensaje, ruta}) => {
   const navigation = useNavigation();
   return (
         
-        <TouchableOpacity onPress={ () => navigation.navigate(ruta) }  style={[styles.card, styles.elevation]}>
-                <View style={{flexDirection: 'row', alignItems: 'center'}}>
-                    <Avatar bg="purple.600" alignSelf="center" size="lg" source={{ uri: "https://images.unsplash.com/photo-1510771463146-e89e6e86560e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=627&q=80"}}></Avatar>
-                    <Text style={styles.heading}>{mensaje}</Text>
-                    <Icon name={'chevron-forward-outline'} size={45} color={'black'} />
-                </View>
+        <TouchableOpacity onPress={ () => navigation.navigate(ruta) }  style={[styles.card, styles.elevation, {marginBottom: 35}]}>
+          <View style={{flexDirection: 'row', alignItems: 'center'}}>
+              <Avatar bg="purple.600" alignSelf="center" size="lg" source={{ uri: "https://images.unsplash.com/photo-1510771463146-e89e6e86560e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=627&q=80"}}></Avatar>
+              <Text style={styles.heading}>{mensaje}</Text>
+              <Icon name={'chevron-forward-outline'} size={45} color={'black'} />
+          </View>
         </TouchableOpacity>
   )
 }

@@ -93,7 +93,7 @@ const styless = StyleSheet.create({
         marginTop: 30,
         marginBottom: 30,
         alignItems: 'center',
-        height: 100
+        height: 50
     },
     txtSesion: {
         fontSize: 18,
