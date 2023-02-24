@@ -4,6 +4,7 @@ import { AttendanceScreen } from '../screens/user/AttendanceScreen';
 import { ProfileScreen } from '../screens/ProfileScreen'
 import Icon from 'react-native-vector-icons/Ionicons';
 import { MTTabsBonosUsersNavigator } from './MTTabsBonosUsersNavigator';
+import { LoginScreen } from '../screens/LoginScreen';
 
 export const MBottomTabsUserNavigator = () => {
     const MTabs = createMaterialBottomTabNavigator();
@@ -26,6 +27,9 @@ export const MBottomTabsUserNavigator = () => {
                         case 'ProfileScreen':
                             my_icon='person-circle';
                         break;
+                        case 'LoginScreen':
+                            my_icon='person-circle';
+                        break;
                         default: 
                         break;
                     }
@@ -37,6 +41,7 @@ export const MBottomTabsUserNavigator = () => {
         <MTabs.Screen name='AttendanceScreen' options={{tabBarLabel:'Asistencias'}} component={AttendanceScreen} />
         <MTabs.Screen name='MTTabsBonosUsersNavigator' options={{tabBarLabel:'Bonos'}} component={MTTabsBonosUsersNavigator} />
         <MTabs.Screen name='ProfileScreen' options={{tabBarLabel:'Perfil'}} component={ProfileScreen} />
+        <MTabs.Screen name='LoginScreen' options={{tabBarLabel:'Perfil'}} component={LoginScreen} />
     </MTabs.Navigator>
   )
 }
