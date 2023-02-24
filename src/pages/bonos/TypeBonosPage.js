@@ -5,7 +5,7 @@ import { StyleSheet } from 'react-native'
 
 export const TypeBonosPage = () => {
   return (
-        <View>
+        <View style={{flex:1, backgroundColor: 'white'}}>
             <Text style={styless.title}>Tipos de bonos</Text>
                 <BonosComponent nombre='Mensual' descripcion='Recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.' />
                 <BonosComponent nombre='Mensual' descripcion='Recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.' />

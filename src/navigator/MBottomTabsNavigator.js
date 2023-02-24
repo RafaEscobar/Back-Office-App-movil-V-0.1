@@ -12,6 +12,7 @@ import { MTTabsAttendanceNavigator } from './MTTabsAttendanceNavigator';
 // Iconos
 import Icon from 'react-native-vector-icons/Ionicons';
 import { paletaColorsSecond } from '../themes/appTheme';
+import { StackNavigator } from './StackNavigator';
 
 
 const MBTabs = createMaterialBottomTabNavigator();
@@ -34,8 +35,11 @@ export const MBottomTabsNavigator = () => {
               case 'MTTabsBonosNavigator':
                 myIcon='gift';
               break;
+              case 'StackNavigator':
+                myIcon='add';
+              break;
               case 'StaffScreen':
-                myIcon='grid';
+                myIcon='apps';
               break;
               case 'ProfileScreen':
                 myIcon='person-circle'  ;
@@ -51,6 +55,7 @@ export const MBottomTabsNavigator = () => {
     >
         <MBTabs.Screen name='MTTabsAttendanceNavigator' options={{ tabBarLabel:'Asistencias' }} component={MTTabsAttendanceNavigator} />
         <MBTabs.Screen name='MTTabsBonosNavigator' options={{ tabBarLabel:'Bonos' }} component={MTTabsBonosNavigator} />
+        <MBTabs.Screen name='StackNavigator' options={{ tabBarLabel:'Registros' }} component={StackNavigator} />
         <MBTabs.Screen name='StaffScreen' options={{ tabBarLabel:'Trabajadores',  }} component={StaffScreen} />
         <MBTabs.Screen name='ProfileScreen' options={{ tabBarLabel:'Perfil' }} component={ProfileScreen} />
     </MBTabs.Navigator>
