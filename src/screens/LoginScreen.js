@@ -14,23 +14,16 @@ export const LoginScreen = ({navigation}) => {
 
     const mensaje = [{status: "error",title: "Credenciales invalidas!"}];
 
-    // // let dataToSend = {correo: email, con: contra};
-    // // let formBody = [];
-    // // for (let key in dataToSend) {
-    // //   let encodedKey = encodeURIComponent(key);
-    // //   let encodedValue = encodeURIComponent(dataToSend[key]);
-    // //   formBody.push(encodedKey + '=' + encodedValue);
-    // // }
-    // // formBody = formBody.join('&');
-
 
     const handleSubmitPress = () => {
         
             // console.log(email.correo);
             if (email===baseEmail && contra==baseContra) {
-              navigation.replace('MBottomTabsNavigator');
+              // navigation.replace('MBottomTabsNavigator');
+              navigation.replace('DrawerNavigator');
             } else if(email===userEmail && contra==userContra){
               navigation.replace('MBottomTabsUserNavigator');
+              // navigation.replace('DrawerNavigator');
             }else {
                 toast.show({
                     render: () => {

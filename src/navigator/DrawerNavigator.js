@@ -2,21 +2,21 @@ import React from 'react'
 import { createDrawerNavigator } from '@react-navigation/drawer'
 
 import { MBottomTabsNavigator } from './MBottomTabsNavigator';
-import { IndexB } from '../pages/createBonos/IndexB';
-import { IndexP } from '../pages/createPuestos/IndexP';
-import { IndexU } from '../pages/createUsers/IndexU';
+import { CreateBonos } from '../pages/createBonos/CreateBonos';
+import { CreatePuesto } from '../pages/createPuestos/CreatePuesto';
+import { CreateUser } from '../pages/createUsers/CreateUser';
 
 const Drawer = createDrawerNavigator();
-
+ 
 export const DrawerNavigator = () => {
   return (
     <Drawer.Navigator
-      screenOptions={{ headerShown: false }}
+
     >
-        <Drawer.Screen name='MBottomTabsNavigator' component={MBottomTabsNavigator} />
-        <Drawer.Screen name='indexU' component={IndexU} />
-        <Drawer.Screen name='indexP' component={IndexP} />
-        <Drawer.Screen name='indexB' component={IndexB} />
+        <Drawer.Screen name='MBottomTabsNavigator'  options={{headerShown: false, title: 'Inicio'}} component={MBottomTabsNavigator} />
+        <Drawer.Screen name='CreateUser'  options={{headerShown: true,  title: 'Crear usuario'}} component={CreateUser} />
+        <Drawer.Screen name='CreatePuesto'  options={{headerShown: true,  title: 'Crear puesto'}} component={CreatePuesto} />
+        <Drawer.Screen name='CreateBonos'  options={{headerShown: true,  title: 'Crear bono'}} component={CreateBonos} />
     </Drawer.Navigator>
   )
 }

@@ -11,13 +11,6 @@ export const App = () => {
   return (
     <NativeBaseProvider>
       <NavigationContainer>
-        {/* PRINCIPAL */}
-        {/* <MBottomTabsNavigator /> */}
-
-        {/* PARA USUARIO */}
-        {/* <MBottomTabsUserNavigator /> */}
-
-        {/* CON LOGIN */}
         <StackAuth />
       </NavigationContainer>
     </NativeBaseProvider>
