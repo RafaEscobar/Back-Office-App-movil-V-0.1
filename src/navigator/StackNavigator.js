@@ -17,12 +17,12 @@ export const StackNavigator = () => {
   return (
     <Stack.Navigator>
         <Stack.Screen name='GeneradorScreen' options={{headerShown:false}} component={GeneradorScreen} />
-        <Stack.Screen name='IndexU' options={{}} component={IndexU} />
-        <Stack.Screen name='IndexP' options={{}} component={IndexP} />
-        <Stack.Screen name='IndexB' options={{ }} component={IndexB} />
-        <Stack.Screen name='CreateUser' options={{ }} component={CreateUser} />
-        <Stack.Screen name='CreateBonos' options={{ }} component={CreateBonos} />
-        <Stack.Screen name='CreatePuesto' options={{ }} component={CreatePuesto} />
+        <Stack.Screen name='IndexU' options={{ title:'Registros de usuarios' }} component={IndexU} />
+        <Stack.Screen name='IndexP' options={{ title:'Registros de puestos' }} component={IndexP} />
+        <Stack.Screen name='IndexB' options={{ title:'Registros de bonos'  }} component={IndexB} />
+        <Stack.Screen name='CreateUser' options={{  title:'Crear usuario' }} component={CreateUser} />
+        <Stack.Screen name='CreateBonos' options={{  title:'Crear bono'}} component={CreateBonos} />
+        <Stack.Screen name='CreatePuesto' options={{ title:'Crear puesto' }} component={CreatePuesto} />
     </Stack.Navigator>
   )
 }

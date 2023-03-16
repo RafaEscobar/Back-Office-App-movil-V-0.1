@@ -1,7 +1,8 @@
 import React from 'react'
-import { Stack, Input, Button, FormControl, Radio, Box } from 'native-base'
+import { Stack, Input, FormControl, Radio, Box } from 'native-base'
 import {View, StyleSheet, ScrollView,} from 'react-native'
 import { useFormik } from 'formik'
+import { Button } from "@react-native-material/core";
 
 export const CreateUser = () => {
 
@@ -43,7 +44,9 @@ export const CreateUser = () => {
                 <Input variant="underlined" placeholder="Ingresa la contraseña" value={values.contra} onChangeText={text => setFieldValue('contra', text)} />
                 <FormControl.Label style={styles.txt}>Puesto: </FormControl.Label>
                 <Input variant="underlined" placeholder="Ingresa el puesto" value={values.puesto} onChangeText={text => setFieldValue('puesto', text)} />
-                <Button size="sm" variant="outline" style={{marginVertical: 35}}>Enviar</Button>
+
+                <Button title="Enviar" onPress={() => alert("Guardado")} style={{marginTop: 50}} />
+                {/* <Button size="sm" variant="outline" style={{marginVertical: 35}}>Enviar</Button> */}
                 <Box style={{marginBottom: 10}}></Box>
             </FormControl>
         </View>

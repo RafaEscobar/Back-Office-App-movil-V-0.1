@@ -6,7 +6,7 @@ import { IndexUComponent } from '../../components/indexes/IndexUComponent'
 export const IndexU = () => {
   return (
     <Box style={{flex:1, backgroundColor: 'white'}}>
-      <Text style={style.title}>Registros de usuarios</Text>
+      {/* <Text style={style.title}>Registros de usuarios</Text> */}
       <IndexUComponent nombre='Alin Amparo' puesto='Gerente' />
     </Box>
   )

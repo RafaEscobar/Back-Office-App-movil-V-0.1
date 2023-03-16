@@ -1,7 +1,8 @@
 import React from 'react'
-import { Stack, Input, Button, FormControl, Radio, Box } from 'native-base'
+import { Stack, Input, FormControl, Radio, Box } from 'native-base'
 import {View, StyleSheet, ScrollView,} from 'react-native'
 import { useFormik } from 'formik'
+import { Button } from "@react-native-material/core";
 
 export const CreatePuesto = () => {
 
@@ -30,7 +31,7 @@ export const CreatePuesto = () => {
                 <FormControl.Label style={styles.txt}>Área:</FormControl.Label>
                 <Input variant="underlined" placeholder="Ingresa el área del puesto" value={values.area} onChangeText={text => setFieldValue('area', text)} />
 
-                <Button size="sm" variant="outline" style={{marginTop: 80}}>Enviar</Button>
+                <Button title="Enviar" onPress={() => alert("Guardado")} style={{marginTop: 100}} />
                 <Box style={{marginBottom: 40}}></Box>
             </FormControl>
         </View>
