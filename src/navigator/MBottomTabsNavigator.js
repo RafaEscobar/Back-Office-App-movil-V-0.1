@@ -56,7 +56,7 @@ export const MBottomTabsNavigator = () => {
         <MBTabs.Screen name='MTTabsAttendanceNavigator' options={{ tabBarLabel:'Asistencias' }} component={MTTabsAttendanceNavigator} />
         <MBTabs.Screen name='MTTabsBonosNavigator' options={{ tabBarLabel:'Bonos' }} component={MTTabsBonosNavigator} />
         <MBTabs.Screen name='StackNavigator' options={{ tabBarLabel:'Registros' }} component={StackNavigator} />
-        <MBTabs.Screen name='StaffScreen' options={{ tabBarLabel:'Trabajadores',  }} component={StaffScreen} />
+        <MBTabs.Screen name='StaffScreen' options={{ tabBarLabel:'Empleados',  }} component={StaffScreen} />
         <MBTabs.Screen name='ProfileScreen' options={{ tabBarLabel:'Perfil' }} component={ProfileScreen} />
     </MBTabs.Navigator>
   )
