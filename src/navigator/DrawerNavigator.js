@@ -10,9 +10,7 @@ const Drawer = createDrawerNavigator();
  
 export const DrawerNavigator = () => {
   return (
-    <Drawer.Navigator
-
-    >
+    <Drawer.Navigator>
         <Drawer.Screen name='MBottomTabsNavigator'  options={{headerShown: false, title: 'Inicio'}} component={MBottomTabsNavigator} />
         <Drawer.Screen name='CreateUser'  options={{headerShown: true,  title: 'Crear usuario'}} component={CreateUser} />
         <Drawer.Screen name='CreatePuesto'  options={{headerShown: true,  title: 'Crear puesto'}} component={CreatePuesto} />

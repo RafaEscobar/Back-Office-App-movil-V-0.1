@@ -7,7 +7,7 @@ import { IndexPComponent } from '../../components/indexes/IndexPComponent'
 export const IndexP = () => {
   return (
     <Box style={{flex:1, backgroundColor: 'white'}}>
-      <Text style={style.title}>Registros de Puestos</Text>
+      {/* <Text style={style.title}>Registros de Puestos</Text> */}
       <IndexPComponent salario={1200} nombre='Primero' />
   </Box>
   )

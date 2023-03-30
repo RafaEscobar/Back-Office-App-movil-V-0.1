@@ -6,7 +6,7 @@ import {StyleSheet} from 'react-native'
 export const IndexB = () => {
   return (
     <Box style={{flex:1, backgroundColor: 'white'}}>
-      <Text style={style.title}>Registros de Bonos</Text>
+      {/* <Text style={style.title}>Registros de Bonos</Text> */}
       <IndexBComponent bono='Quincenal' monto={200} />
   </Box>
   )
