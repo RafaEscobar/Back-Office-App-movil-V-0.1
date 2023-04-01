@@ -11,8 +11,8 @@ export const StackAuth = () => {
   return (
     <Stack.Navigator>
         <Stack.Screen options={{ headerShown: false }} name='LoginScreen' component={LoginScreen} />
-        {/* <Stack.Screen options={{ headerShown: false }} name='MBottomTabsNavigator' component={MBottomTabsNavigator} /> */}
-        <Stack.Screen options={{ headerShown: false }} name='DrawerNavigator' component={DrawerNavigator} />
+        <Stack.Screen options={{ headerShown: false }} name='MBottomTabsNavigator' component={MBottomTabsNavigator} />
+        {/* <Stack.Screen options={{ headerShown: false }} name='DrawerNavigator' component={DrawerNavigator} /> */}
         <Stack.Screen options={{ headerShown: false }} name='MBottomTabsUserNavigator' component={MBottomTabsUserNavigator} />
         <Stack.Screen options={{ headerShown: false }} name='ProfileScreen' component={ProfileScreen} />
     </Stack.Navigator>
