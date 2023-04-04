@@ -3,7 +3,7 @@ import React from 'react'
 import { styles } from '../themes/appTheme';
 import { StyleSheet } from 'react-native';
 
-export const AttendancesComponent = ({ img_path, nombre, entrada, turno }) => {
+export const AttendancesComponent = ({ img_path, nombre, entrada, puesto }) => {
   return (
     <Box style={styles.boxCenter}>
       <Box style={styles.boxAccess}>
@@ -15,8 +15,8 @@ export const AttendancesComponent = ({ img_path, nombre, entrada, turno }) => {
           <Text style={styless.txt}>Entrada: {entrada}</Text>
         </Box>
         <Box style={styless.boxmargingL}>
-          <Text style={styless.title}>Turno:</Text>
-          <Text style={styless.txt}>{turno}</Text>
+          <Text style={styless.title}>Puesto:</Text>
+          <Text style={styless.txt}>{puesto}</Text>
         </Box>
       </Box>
     </Box>

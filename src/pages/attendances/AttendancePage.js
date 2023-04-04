@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useEffect, useState} from 'react'
 import { Text, View } from 'native-base'
 import { StyleSheet } from 'react-native';
 import { AttendancesComponent } from '../../components/AttendancesComponent';
@@ -6,10 +6,16 @@ import { AttendancesComponent } from '../../components/AttendancesComponent';
 let url_Provicional='https://images.unsplash.com/photo-1603415526960-f7e0328c63b1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80';
 
 export const AttendancePage = () => {
+
+  const [nombre, setNombre] = useState("");
+  const [entrada, setEntrada] = useState("");
+  const [puesto, setPuesto] = useState("");
+
+
   return (
     <View>
         <Text style={styless.title}>Lista de empleados con asistencia hoy</Text>
-        <AttendancesComponent nombre='Rafael Escobar' img_path={url_Provicional} entrada='00:00' turno='Primero' /> 
+        <AttendancesComponent nombre='Rafael Escobar' img_path={url_Provicional} entrada='00:00' puesto='AB' /> 
     </View>
   )
 }
